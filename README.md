@@ -32,6 +32,7 @@ https://github.com/jloh02/dlib/releases/download/v19.22/dlib-19.22.99-cp310-cp31
 
 * After the requirements are matched, run [app.py](https://github.com/Rohan-Redd/Vision/blob/main/app.py)
 * Website can be accessed on local system at http://127.0.0.1:5000
+* ***Optional -*** images in the [Images](https://github.com/Rohan-Redd/Vision/tree/main/Images) folder are the known faces whom the face recognition can recognize. So they can be changed as pleased
 
 ## Website Links
 * Home Page - http://127.0.0.1:5000

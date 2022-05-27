@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- redirecting to other webpages -->
+<script>
+    window.addEventListener("keydown", checkKeyPress, false);
+     function checkKeyPress(key)
+     {
+         // Object Detection
+         if (key.keyCode == "70") // F key
+         {
+             window.location.replace("/");
+         }
+ 
+         //Face Detection
+         else if(key.keyCode == "74") // J key
+         {
+             window.location.replace("obj_detect");
+         }
+     }
+ </script>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Face Recognition</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/fav.png') }}" type="image/x-icon">
+
+    <!-- Bootstrap -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='ionicons/css/ionicons.min.css') }}" rel="stylesheet">
+
+    <!-- main css -->
+    <link href="{{ url_for('static', filename='css/style1.css') }}" rel="stylesheet">
+
+    <!-- modernizr -->
+    <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+        <!-- box header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="/ "><img src="{{ url_for('static', filename='img/logo.png') }}" width="150" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box header -->
+
+        <!-- nav -->
+        <nav>
+            <ul class="box-primary-nav">
+                <br>
+                <li><a href="/">Home Page</a><i class="ion-ios-circle-filled color"></i></li>
+                <br>
+                <li><a href="obj_detect">Object Detection</a><i class="ion-ios-circle-filled color"></i></li>
+                <br>
+                <li><a href="about">About</a><i class="ion-ios-circle-filled color"></i></li>
+                <br><br>
+                <li class="box-label">GitHub Repository</li>
+                <li class="box-social"><a href="#0"><i class="ion-social-github-outline"></i></a></li>
+            </ul>
+        </nav>
+        <!-- end nav -->
+    </div>
+
+    <!-- top bar -->
+    <div class="top-bar">
+        <h1>face recognition</h1>
+        <p>Using OpenCV</p>
+    </div>
+    <!-- end top bar -->
+
+    <div class="container main-container">
+        <div class="clearfix">
+
+            <!-- service-box -->
+            <div class="col-md-5 service-box">
+                <h3>Faces Recognised</h3>
+                <div class="h-10"></div>
+                <h4 id="nameInput">{{ value }} </h4>
+            </div>
+            <!-- end service-box -->
+
+            <!-- service-box -->
+            <div class="col-md-4 service-box">
+                <h3>Image Captured</h3>
+                <div class="h-10"></div>
+                <img src="{{ url_for('face_feed') }}" width="175%">
+            </div>
+            <!-- end service-box -->
+
+            <!-- service-box -->
+            <div class="col-md-12 service-box">
+                <h3><br><br><br>
+                    Known Faces</h3>
+                <div class="h-10"></div>
+                <h4>{{ known }} </h4>
+            </div>
+            <!-- end service-box -->
+
+            <div class="col-md-4 col-md-offset-4" style="text-align:center">
+                <br><br><br>
+                <h3 class="text-uppercase">Redirecting instructions</h3>
+                <div class="h-30"></div>
+                <h5>Press Key &emsp;&emsp;&emsp;&ensp; Press Key</h5>
+                <img src="{{ url_for('static', filename='img/f.png') }}" width="80"> &emsp;&emsp; 
+                <img src="{{ url_for('static', filename='img/j.png') }}" width="80">
+                <h5 style="color:grey;">For Home &emsp;&emsp;&emsp; For Object </h5>
+                <h5 style="color:grey;">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Detection</h5>
+            </div>
+        </div>
+    </div>
+
+    <!-- giving audio output -->
+    <script src="http://code.responsivevoice.org/responsivevoice.js"></script>>
+    <script>
+        var text1 = "Faces Recognised: " ;
+        var text2 = document.getElementById('nameInput').innerHTML;
+        var text = text1+text2;
+        responsiveVoice.speak(text);
+    </script>
+    <!-- end audio output -->
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            <p>Website by Adavelli Rohan Reddy</p>
+            <img src="{{ url_for('static', filename='img/fav.png') }}" width="40" alt="Logo">
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- back to top -->
+    <a href="#" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+    <!-- jQuery -->
+    <script src="{{ url_for('static', filename='js/jquery-2.1.1.js') }}"></script>
+
+    <!-- plugins -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/menu.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/animated-headline.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/isotope.pkgd.min.js') }}"></script>
+
+    <!-- custom script -->
+    <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+
+</body>
+</html>

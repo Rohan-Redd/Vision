@@ -16,10 +16,10 @@ According to the World Health Organization, roughly 2.2 billion people are visua
 ```
 numpy
 opencv-python
+flask
 cmake
 dlib
 face_recognition
-flask
 ```
 
 

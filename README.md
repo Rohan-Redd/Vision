@@ -1,6 +1,10 @@
 # VISION  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <img src="https://github.com/Rohan-Redd/Vision/blob/main/Static/img/fav.png" width="100" height="70"> 
 Object Detection and Face Recognition Website
 
+According to the World Health Organization, roughly 2.2 billion people are visually impaired. Vision loss can cause problems in everyday life, but with the help of 'VISION,' we could make the lives easier.
+
+'VISION' assists visually challenged people by acting as their virtual vision. Keyboard shortcuts can be used to browse the website. The items in front of the individual can be detected using a camera. The faces of others in front of user can also be recognised, and an audio output is sent to the user.
+
 ## Installation
 
 ### Requirements

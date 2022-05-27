@@ -34,6 +34,9 @@ https://github.com/jloh02/dlib/releases/download/v19.22/dlib-19.22.99-cp310-cp31
 * Website can be accessed on local system at http://127.0.0.1:5000
 * ***Optional -*** images in the [Images](https://github.com/Rohan-Redd/Vision/tree/main/Images) folder are the known faces whom the face recognition can recognize. So they can be changed as pleased
 
+## Permissions (Optional)
+* Give permission of sound to 127.0.0.1:5000 on the browser being used, so that a pop-up to allow permission for sound does not appear everytime you visit the website
+
 ## Website Links
 * Home Page - http://127.0.0.1:5000
 * Object Detection Page - http://127.0.0.1:5000/obj_detect

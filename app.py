@@ -174,9 +174,12 @@ def obj_det():
         for classId, confidence ,box in zip(classIds.flatten(),confs.flatten(),bbox):
             # Draw a box around the object 
             cv2.rectangle(frame,box,color=(0,255,0),thickness=2)
-            # Draw a label with a name of the object
+            # Draw a label with a name and confidence of the object
             cv2.putText(frame,classNames[classId-1].upper(),(box[0]+10,box[1]+30),
             cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2)
+            cv2.putText(frame,str(round(confidence*100,2)),(box[0]+200,box[1]+30),
+            cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2)
+            
 
         ret, buffer = cv2.imencode('.jpg', frame)
         frame = buffer.tobytes()

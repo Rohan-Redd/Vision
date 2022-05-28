@@ -6,16 +6,10 @@
     window.addEventListener("keydown", checkKeyPress, false);
      function checkKeyPress(key)
      {
-         // Object Detection
+         // Home
          if (key.keyCode == "70") // F key
          {
-             window.location.replace("face_recog");
-         }
- 
-         //Face Detection
-         else if(key.keyCode == "74") // J key
-         {
-             window.location.replace("obj_detect");
+             window.location.replace("/ ");
          }
      }
 </script>
@@ -116,11 +110,9 @@
                 <br><br><br>
                 <h3 class="text-uppercase">Redirecting instructions</h3>
                 <div class="h-30"></div>
-                <h5>Press Key &emsp;&emsp;&emsp;&ensp; Press Key</h5>
-                <img src="{{ url_for('static', filename='img/f.png') }}" width="80"> &emsp;&emsp; 
-                <img src="{{ url_for('static', filename='img/j.png') }}" width="80">
-                <h5 style="color:grey;">For Face &emsp;&emsp;&emsp; For Object </h5>
-                <h5 style="color:grey;"> Recognition &emsp;&emsp;Detection</h5>
+                <h5>Press Key</h5>
+                <img src="{{ url_for('static', filename='img/f.png') }}" width="80">
+                <h5 style="color:grey;">For Home</h5>
             </div>
         </div>
     </div>

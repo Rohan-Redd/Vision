@@ -64,6 +64,5 @@ https://github.com/jloh02/dlib/releases/download/v19.22/dlib-19.22.99-cp310-cp31
 
 * About Page 
 ```
-   * Press key 'F' to go to Object Detection Page
-   * Press key 'J' to go to Face Recognition Page
+   * Press key 'F' to go to Home Page
 ```

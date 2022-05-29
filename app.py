@@ -46,8 +46,6 @@ cam = cv2.VideoCapture(0)
 # Initialize some variables
 face_locations = []
 face_encodings = []
-face_names = []
-
 
 # Object Detection Inititalization
 
